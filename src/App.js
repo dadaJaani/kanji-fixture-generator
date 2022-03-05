@@ -44,6 +44,7 @@ function App() {
 
             <div className="lists-container">
                 <div className="list">
+                    <h2>Team 1</h2>
                     {list1.map((item, index) => (
                         <input
                             value={item}
@@ -56,6 +57,7 @@ function App() {
                     ))}
                 </div>
                 <div className="list">
+                    <h2>Team 2</h2>
                     {list2.map((item, index) => (
                         <input
                             value={item}

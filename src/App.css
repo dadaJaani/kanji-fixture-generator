@@ -1,103 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html, body, input, button {
+    font-family: "Fredoka", sans-serif;
+    /* font-family: 'League Spartan', sans-serif; */
+}
+
 .App {
-  text-align: center;
-  padding: 2rem;
-  display: flex;
-  flex-flow: column wrap;
-  grid-gap: 1rem;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 1rem;
+    
+    background: #D81159;
+    min-height: 100vh;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
+
+h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+} 
 
 .button-group {
-  display: flex;
-  justify-content: center;
-  grid-gap: 1rem;
+    display: flex;
+    justify-content: center;
+    grid-gap: 1rem;
 }
 .button-round-player {
-  cursor: pointer;
-  padding: 0.8rem 1.5rem;
-  background: none;
-  border: 1px solid #333;
-  border-radius: 2rem;
-  transition: all 0.1s;
+    cursor: pointer;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255,255,255,0.5);
+    border: 1px solid #333;
+    border-radius: 2rem;
+    transition: all 0.1s;
 }
 .button-round-player:hover {
-  background: red;
+    background: #FFBC42;
 }
 .button-round-player:hover {
-
 }
 .button-add-player {
-
 }
 .button-remove-player {
-
 }
 .button-generate {
-
-  cursor: pointer;
-  padding: 0.8rem 1.5rem;
-  background: none;
-  border: 1px solid #333;
-  border-radius: 2rem;
-  transition: all 0.1s;
-  font-weight: 800;
-  font-size: 2rem;
-  align-self: center;
+    cursor: pointer;
+    padding: 0.8rem 2rem;
+    background: none;
+    border: 1px solid #333;
+    background: rgba(255,255,255,0.6);
+    border-radius: 2rem;
+    transition: all 0.1s;
+    font-weight: 600;
+    font-size: 2rem;
+    align-self: center;
 }
 
 .button-generate:hover {
-  background: green;
+    background: #FFBC42;
+    
 }
 
 .lists-container {
-  display: flex;
+    display: flex;
+    align-self: center;
+    grid-gap: 1rem;
 }
 
 .list {
-  display: flex;
-  flex-flow: column wrap;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 0.5rem;
+}
+.list h2{
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.list input{
+    padding: 0.5rem 1rem;
+    text-align: center;
+    width: 15rem;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid #555;
+
+    background: rgba(255,255,255,0.8);
+    border-radius: 1rem;
+    box-shadow: 2px 5px 10px 0 rgba(0,0,0,0.2);
 }
 
 .fixtures-result {
-  
-  display: flex;
-  flex-flow: row wrap;
-  grid-gap: 1rem;
-  /* padding: 2rem; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    grid-gap: 1rem;
+    /* padding: 2rem; */
 }
-
 
 .fix-day-container {
-  background: red;
-  display: flex;
-  flex-flow: column wrap;
-  padding: 1rem;
-  
+    background: rgba(255,255,255,0.8);
+    border-radius: 1rem;
+    box-shadow: 2px 5px 10px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1rem;
 }
-.fix-day-container h3{
-  margin: 0 0 1rem;
-  font-size: 1rem;
+.fix-day-container h3 {
+    margin: 0 0 ;
+    font-size: 1rem;
+    font-weight: 200;
 }
 .fix-day-list {
-  display: flex;
-  flex-flow: column wrap;
-  /* grid-gap: 0.5rem; */
+    display: flex;
+    flex-flow: column wrap;
+    /* grid-gap: 0.5rem; */
 }
 
-.fix-day-list label:last-child{
-  border-bottom: none;
+.fix-day-list label:last-child {
+    border-bottom: none;
 }
-
 
 .fix-day-list label {
-  display: flex;
-  flex-flow: column wrap;
-  grid-gap: 0.5rem;
-  border-bottom: 1px solid black;
-  padding: 1rem;
-  font-size: 1.2rem;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 0.5rem;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+    font-size: 1.2rem;
 }
