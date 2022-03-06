@@ -143,16 +143,31 @@ h2 {
 
 @media only screen and (max-width: 500px) {
     .App {
-        padding: 1rem;
-
+        padding: 0.5rem 0.5rem 2rem;
     }
 
+    
+
+    .lists-container {
+        justify-content: center;
+        align-self: stretch;
+        grid-gap: 0.5rem;
+    }
+    .list {
+        /* display: flex; */
+        /* flex-flow: column wrap; */
+        align-items: center;
+        grid-gap: 0.5rem;
+    }
     .list input {
         padding: 0.5rem;
-        width: auto;
+        width: 90%;
+    }
+    .button-group {
+        justify-content: center;
     }
 
-.fixtures-result {
-    flex-flow: column wrap;
-}
+    .fixtures-result {
+        flex-flow: column wrap;
+    }
 }
