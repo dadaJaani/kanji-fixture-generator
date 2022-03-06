@@ -23,13 +23,18 @@ function App() {
     const generateFixtures = () => {
         let result = [];
 
+        let shufflingList = [...list2];
+
         for (var i = 0; i < list1.length; i++) {
-            for (var j = 0; j < list2.length; j++) {
-                if (!result[j]) {
-                    result[j] = [];
+            for (var j = 0; j < shufflingList.length; j++) {
+                if (!result[i]) {
+                    result[i] = [];
                 }
-                result[j][i] = `${list1[i]} vs ${list2[j]}`;
+                result[i][j] = `<strong>${list1[j]}</strong> vs <strong>${shufflingList[j]}</strong>`;
             }
+            let fistItem = shufflingList.shift();
+            shufflingList.push(fistItem);
+            
         }
 
         console.log("result", result);
@@ -92,7 +97,14 @@ function App() {
                     fixtures.map((dayList, ind2) => (
                         <div key={ind2} className="fix-day-container">
                             <h3>Day {ind2 + 1}</h3>
-                            <div className="fix-day-list">{dayList.length > 0 && dayList.map((item, ind1) => <label key={ind1}>{item}</label>)}</div>
+                            <div className="fix-day-list">
+                                {dayList.length > 0 &&
+                                    dayList.map((item, ind1) => (
+                                        <div key={ind1} dangerouslySetInnerHTML={{ __html: item }}>
+                                            {/* {item} */}
+                                        </div>
+                                    ))}
+                            </div>
                         </div>
                     ))}
                 {/* </div> */}
